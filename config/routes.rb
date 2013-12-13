@@ -1,4 +1,6 @@
 OnyxWeekly::Application.routes.draw do
+  resources :teams
+
   get "home/index"
   devise_for :users
   devise_scope :user do
