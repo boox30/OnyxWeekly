@@ -1,0 +1,2 @@
+$("#<%= dom_id(@user) %>").replaceWith("<%= escape_javascript(render :partial => "user", locals: {user: @user}) %>");
+

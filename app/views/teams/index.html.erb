@@ -1,27 +1,25 @@
-<h1>Listing teams</h1>
+<div class="page-header">
+    <%= button_to "New Team", new_team_path, :method => :get, :class => "btn btn-success pull-right"%>
+    <h1>Teams</h1>
+</div>
+<% @teams.each do |team| %>
+<div class="well">
+    <div class="page-header">
+        <h3><%= team.name %></h3>
+        <%= button_to 'Destroy', team, method: :delete, :class => "btn btn-danger pull-right", data: { confirm: 'Are you sure?' } %>
+        <%= button_to 'Edit', edit_team_path(team), :method => :get, :class => "btn btn-primary pull-right team_edit_button" %>
+    </div>
+    <div class="row">
+        <% @users.each do |user| %>
+            <% if team.team_member?(user) %>
+                <div class="col-xs-4 col-md-1 user_item">
+                    <%= user_avatar_tag(user, :normal) %>
+                    <%= user.name %>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @teams.each do |team| %>
-      <tr>
-        <td><%= team.name %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Team', new_team_path %>

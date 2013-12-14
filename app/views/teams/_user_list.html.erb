@@ -1,0 +1,8 @@
+    
+    <ul class="media-list">
+        <% User.all.each do |user|%>
+        <li class="media">
+            <a class="pull-left"><%= user_avatar_tag(user, :normal) %></a> <div class="media-body"> <h5><%= user.name %></h5></div>
+        </li>
+        <%end%>
+    </ul>

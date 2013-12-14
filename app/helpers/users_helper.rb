@@ -22,7 +22,7 @@ module UsersHelper
   end
 
   def user_avatar_tag(user, size = :normal, opts = {})
-    link = opts[:link] || true
+    link = opts[:link]
 
     width = user_avatar_width_for_size(size)
 

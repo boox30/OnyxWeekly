@@ -1,0 +1,13 @@
+<div class="col-xs-6 col-md-2 row user_card" id= "<%= dom_id user%>">
+    <div class="user_avatar col-xs-4 ">
+    <%= user_avatar_tag(user, :normal) %>
+    </div>
+    <div class="user_info col-xs-4 ">
+        <p><%= user.name %></p>
+        <% if @team.team_member?(user) %>
+            <%= button_to "remove", remove_user_team_path(@team, :user_id => user.id), :remote => true, :method => :get,   :class => "btn btn-danger btn-xs" %>
+        <%else%>
+            <%= button_to "add", add_user_team_path(@team, :user_id => user.id), :remote => true, :method => :get,   :class => "btn btn-success btn-xs" %>
+        <%end%>
+    </div>
+</div>

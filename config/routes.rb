@@ -1,6 +1,13 @@
 OnyxWeekly::Application.routes.draw do
-  resources :teams
-
+  
+  resources :teams do
+    member do
+      get "add_user"
+      get "remove_user"
+    end  
+  end
+  
+  
   get "home/index"
   devise_for :users
   devise_scope :user do

@@ -41,21 +41,8 @@
     
     <%= render "layouts/header" %>
     <div class="container content">
-        <% if user_signed_in? %>
-      <div class="row">
-        <div class="col-lg-9">
           <%= bootstrap_flash %>
           <%= yield %>
-        </div>
-        <div class="col-lg-3">
-          <%= render "layouts/siderbar" %>
-        </div><!--/span-->
-      </div><!--/row-->
-      <% else %>
-        <%= bootstrap_flash %>
-        <%= yield %>
-     <% end %>
-
       <footer>
         <!-- <p>&copy; Company 2013</p> -->
       </footer>

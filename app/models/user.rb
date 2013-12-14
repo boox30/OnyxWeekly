@@ -44,13 +44,11 @@ class User
 
   mount_uploader :avatar, AvatarUploader
   
-  belongs_to :user
-    
   # validates :email, :presence => true, :email => true
   
   def email=(val)
     self.email_md5 = Digest::MD5.hexdigest(val || "")
     self[:email] = val
   end
-  
+   
 end
