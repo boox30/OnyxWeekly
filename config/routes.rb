@@ -11,6 +11,13 @@ OnyxWeekly::Application.routes.draw do
   
   
   get "home/index"
+  resources :home do
+    collection do
+      get "find_weeklies_by_user"
+    end
+  end
+  
+  
   devise_for :users
   devise_scope :user do
     delete "/users/sign_out" => "devise/sessions#destroy"

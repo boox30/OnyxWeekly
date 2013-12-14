@@ -6,18 +6,7 @@
         <%= button_to "New Weekly", new_weekly_path, :method => :get, :class => "btn btn-success pull-right"%>
         <h1>Weekly</h1>
     </div>
-    <% @weeklies.each do |weekly|%>
-    <div class="well">
-        <div class="weekly_header">
-            <h3><%= weekly.created_at.strftime("%U").to_i%></h3>
-           
-        </div>
-        <div>
-            <%= markdown weekly.body %>
-        </div>
-        <div class="weekly_footer">
-            <%= button_to 'Edit', edit_weekly_path(weekly), :method => :get, :class => "btn btn-primary btn-xs pull-right" %>
-        </div>
+    <div  id="weeklies_list">
+        <%= render @weeklies%>
     </div>
-    <% end %>
 </div>

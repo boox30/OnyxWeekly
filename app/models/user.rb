@@ -46,7 +46,7 @@ class User
   
   # validates :email, :presence => true, :email => true
   
-  has_many :weeklies
+  has_many :weeklies, order: 'created_at DESC'
   
   def email=(val)
     self.email_md5 = Digest::MD5.hexdigest(val || "")

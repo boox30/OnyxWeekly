@@ -1,8 +1,10 @@
-    
-    <ul class="media-list">
-        <% User.all.each do |user|%>
-        <li class="media">
-            <a class="pull-left"><%= user_avatar_tag(user, :normal) %></a> <div class="media-body"> <h5><%= user.name %></h5></div>
-        </li>
-        <%end%>
-    </ul>
+<ul class="media-list">
+    <% @user.each do |user|%>
+    <li class="media">
+        <a class="pull-left" href="<%= find_weeklies_by_user_home_index_path(:id => user) %>" data-remote="true"><%= user_avatar_tag(user, :normal) %></a>
+        <div class="media-body">
+            <h5><%= user.name %></h5>
+        </div>
+    </li>
+    <%end%>
+</ul>
