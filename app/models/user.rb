@@ -46,6 +46,8 @@ class User
   
   # validates :email, :presence => true, :email => true
   
+  has_many :weeklies
+  
   def email=(val)
     self.email_md5 = Digest::MD5.hexdigest(val || "")
     self[:email] = val

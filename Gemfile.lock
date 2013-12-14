@@ -48,6 +48,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
+    auto-space (0.0.2)
     bcrypt-ruby (3.1.2)
     bson (2.0.0)
     bson_ext (1.5.1)
@@ -95,6 +96,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.5.2)
     minitest (4.7.5)
     moped (2.0.0.beta4)
       bson (~> 2.0)
@@ -102,6 +104,8 @@ GEM
       optionable (~> 0.2.0)
     multi_json (1.8.2)
     nested_form (0.3.2)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     optionable (0.2.0)
     origin (2.0.0)
     orm_adapter (0.5.0)
@@ -128,7 +132,9 @@ GEM
     rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
+    redcarpet (3.0.0)
     ref (1.0.5)
+    rouge (1.2.0)
     sass (3.2.12)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -170,6 +176,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  auto-space
   bson_ext
   carrierwave
   carrierwave-mongoid
@@ -180,8 +187,11 @@ DEPENDENCIES
   less-rails
   mongoid!
   nested_form
+  nokogiri
   rails (= 4.0.0)
   rails-i18n
+  redcarpet
+  rouge
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3

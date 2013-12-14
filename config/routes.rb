@@ -1,5 +1,7 @@
 OnyxWeekly::Application.routes.draw do
   
+  resources :weeklies
+
   resources :teams do
     member do
       get "add_user"

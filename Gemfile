@@ -51,6 +51,12 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 
 gem "nested_form"
 
+# Markdown 格式 & 文本处理
+gem "redcarpet" 
+gem "rouge" 
+gem 'nokogiri' 
+gem 'auto-space'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

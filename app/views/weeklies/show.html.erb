@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @weekly.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @weekly.body %>
+</p>
+
+<p>
+  <strong>Body html:</strong>
+  <%= @weekly.body_html %>
+</p>
+
+<%= link_to 'Edit', edit_weekly_path(@weekly) %> |
+<%= link_to 'Back', weeklies_path %>
