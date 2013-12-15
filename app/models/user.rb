@@ -13,6 +13,9 @@ class User
   
   field :name,              :type => String, :default => ""
   field :email_md5
+  field :skype, :type => String, :default => ""
+  field :tel, :type => String, :default => ""
+  field :short_tel, :type => String, :default => ""
 
   ## Recoverable
   field :reset_password_token,   :type => String
