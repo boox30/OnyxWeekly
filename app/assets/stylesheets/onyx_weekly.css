@@ -102,3 +102,11 @@
 .meeting_header .tag_div a {
     color: #777777
 }
+
+#people_list .thumbnail {
+    height: 130px;
+}
+#people_list .thumbnail img {
+    float: left;
+    margin-right: 20px; 
+}

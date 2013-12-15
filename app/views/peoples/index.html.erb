@@ -1,0 +1,23 @@
+<div class=" page-header">
+    <h1>People</h1>
+</div>
+<div class="well row" id="people_list">
+    <% @users.each do |user| %>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+
+            <%= user_avatar_tag(user, :big) %>
+            <div class="people_info">
+                <h4><%= user.name %></h4>
+                <span class="people_info_item">Email: <%= user.email %></span>
+                <br />
+                <span class="people_info_item">Phone: <%= user.tel %></span>
+                <br />
+                <span class="people_info_item">Short: <%= user.short_tel %></span>
+                <br />
+                <span class="people_info_item">Skype: <%= user.skype %></span>
+            </div>
+        </div>
+    </div>
+    <% end %>
+</div>

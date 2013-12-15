@@ -30,6 +30,8 @@ OnyxWeekly::Application.routes.draw do
     get    "/users/sign_in" => "devise/sessions#new"
     get    "/users/sign_up" => "devise/registrations#new"
   end
+  
+  get "peoples" => "peoples#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
