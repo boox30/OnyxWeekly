@@ -47,7 +47,7 @@ class User
 
   mount_uploader :avatar, AvatarUploader
   
-  # validates :email, :presence => true, :email => true
+  validates :email, :presence => true, :email => true
   
   has_many :weeklies, order: 'created_at DESC'
   has_many :meetings, order: 'created_at DESC'

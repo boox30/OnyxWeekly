@@ -1,4 +1,5 @@
 class WeekliesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_weekly, only: [:show, :edit, :update, :destroy]
 
   # GET /weeklies
