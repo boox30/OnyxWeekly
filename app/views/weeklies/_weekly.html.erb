@@ -1,5 +1,6 @@
 <div class="well">
     <div class="weekly_header">
+        <span class="created_date pull-right"><%= weekly.created_at.strftime("%m/%d/%Y")%></span>
         <h3><%= weekly.created_at.strftime("%U").to_i%></h3>
     </div>
     <div>

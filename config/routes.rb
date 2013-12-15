@@ -1,5 +1,11 @@
 OnyxWeekly::Application.routes.draw do
   
+  resources :meetings do
+    collection do
+      get "find_meetings_by_tag"
+    end
+  end
+
   resources :weeklies
 
   resources :teams do
