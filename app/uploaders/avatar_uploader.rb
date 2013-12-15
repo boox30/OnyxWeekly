@@ -2,16 +2,29 @@
 
 class AvatarUploader < BaseUploader
     
-  def filename
-      @name ||= "#{timestamp}-#{super}" if original_filename.present? and super.present?
+   version :normal do
+    process :resize_to_fill => [48, 48]
   end
 
-  def timestamp
-    var = :"@#{mounted_as}_timestamp"
-    model.instance_variable_get(var) or model.instance_variable_set(var, Time.now.to_i)
+  version :small do
+    process :resize_to_fill => [24, 24]
   end
-  
+
+  version :large do
+    process :resize_to_fill => [64, 64]
+  end
+
+  version :big do
+    process :resize_to_fill => [120, 120]
+  end
+
+  def filename
+    if super.present?
+      "avatar/#{model.id}.#{file.extension.downcase}"
+    end
+  end
+
   def extension_white_list
-    %w(jpg jpeg gif png)
+    %w(jpg jpeg png)
   end
 end
