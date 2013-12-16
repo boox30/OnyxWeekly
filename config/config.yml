@@ -1,0 +1,16 @@
+
+defaults: &defaults
+  domain: "192.168.0.17:3000"
+  email_server: "secure.emailsrvr.com"
+  email_sender: 'web-server@onyx-international.com'
+  email_password: 'boox60'
+
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
