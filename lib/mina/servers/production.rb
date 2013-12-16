@@ -1,7 +1,7 @@
 # FreeBSD
 namespace :env do
   task :production => [:environment] do
-    set :domain,              '127.0.1.1'
+    set :domain,              '192.168.0.17'
     set :deploy_to,           '/home/dxw/apps/onyxweekly'
     set :sudoer,              'dxw'
     set :user,                'dxw'
