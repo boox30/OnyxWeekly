@@ -78,13 +78,13 @@ OnyxWeekly::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
   
-   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+   config.action_mailer.default_url_options = { :host => Setting.domain }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :address              => "secure.emailsrvr.com",
+  :address              => Setting.email_server,
   :port                 => 465,
-  :user_name            => '',
-  :password             => '',
+  :user_name            => Setting.email_sender,
+  :password             => Setting.email_password,
   :authentication       => :login,
   :tls => true  }
 end

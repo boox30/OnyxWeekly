@@ -1,0 +1,16 @@
+
+defaults: &defaults
+  domain: "127.0.0.1:3000"
+  email_server: "secure.emailsrvr.com"
+  email_sender: 'example@onyx-international.com'
+  email_password: '*******'
+
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

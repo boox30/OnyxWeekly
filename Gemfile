@@ -57,6 +57,8 @@ gem "rouge"
 gem 'nokogiri' 
 gem 'auto-space'
 
+gem "settingslogic"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
