@@ -47,7 +47,7 @@ class User
 
   mount_uploader :avatar, AvatarUploader
   
-  validates :email, :presence => true, :email => true
+  # validates :email, :presence => true, :email => true
   
   has_many :weeklies, order: 'created_at DESC'
   has_many :meetings, order: 'created_at DESC'
@@ -55,6 +55,15 @@ class User
   def email=(val)
     self.email_md5 = Digest::MD5.hexdigest(val || "")
     self[:email] = val
+  end
+  
+  def update_with_password(params={})
+    if !params[:current_password].blank? or !params[:password].blank? or !params[:password_confirmation].blank?
+      super
+    else
+      params.delete(:current_password)
+      self.update_without_password(params)
+    end
   end
    
 end
