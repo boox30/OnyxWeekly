@@ -2,7 +2,7 @@
 
 class AvatarUploader < BaseUploader
     
-   version :normal do
+  version :normal do
     process :resize_to_fill => [48, 48]
   end
 
