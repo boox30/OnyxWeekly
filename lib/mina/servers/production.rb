@@ -2,7 +2,7 @@
 namespace :env do
   task :production => [:environment] do
     set :domain,              '127.0.1.1'
-    set :deploy_to,           '/home/dxw/apps/bookstore'
+    set :deploy_to,           '/home/dxw/apps/onyxweekly'
     set :sudoer,              'dxw'
     set :user,                'dxw'
     set :group,               'dxw'
