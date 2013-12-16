@@ -59,6 +59,10 @@ gem 'auto-space'
 
 gem "settingslogic"
 
+gem 'mina'
+gem 'unicorn'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
