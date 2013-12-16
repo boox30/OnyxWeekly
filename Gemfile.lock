@@ -188,11 +188,11 @@ PLATFORMS
 
 DEPENDENCIES
   auto-space
-  bson_ext
+  bson_ext (= 1.5.1)
   carrierwave
   carrierwave-mongoid
   coffee-rails (~> 4.0.0)
-  devise
+  devise (= 3.2.2)
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
