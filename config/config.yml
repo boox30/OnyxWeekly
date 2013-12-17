@@ -1,6 +1,6 @@
 
 defaults: &defaults
-  domain: "119.136.26.142:3000"
+  domain: "119.136.26.142:9001"
   email_server: "secure.emailsrvr.com"
   email_sender: 'web-server@onyx-international.com'
   email_password: 'boox60'
