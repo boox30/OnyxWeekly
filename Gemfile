@@ -34,7 +34,7 @@ end
 
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 
-gem "bson_ext"
+gem "bson_ext", '1.5.1'
 
 
 #bootstrap
@@ -42,7 +42,7 @@ gem "therubyracer"
 gem "less-rails"
 gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
 
-gem 'devise'
+gem 'devise', '3.2.2'
 
 gem "rails-i18n"
 

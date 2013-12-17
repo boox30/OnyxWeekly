@@ -18,6 +18,7 @@ Dir['lib/mina/servers/*.rb'].each { |f| load f }
 
 set :app,                'OnyxWeekly'
 set :repository,         'git@github.com:dxwts/OnyxWeekly.git'
+set :branch,             'deploy_branch'
 set :keep_releases,       9999        #=> I like to keep all my releases
 set :default_server,     :production
 
