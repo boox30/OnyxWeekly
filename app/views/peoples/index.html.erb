@@ -1,5 +1,5 @@
 <div class=" page-header">
-    <h1>People</h1>
+    <h1><%= t("people.people")%></h1>
 </div>
 <div class="row" id="people_list">
     <% @users.each do |user| %>
@@ -9,13 +9,13 @@
             <%= user_avatar_tag(user, :big) %>
             <div class="people_info">
                 <h4><%= user.name %></h4>
-                <span class="people_info_item">Email: <%= user.email %></span>
+                <span class="people_info_item"><%= t("user.email")+": "+ user.email %></span>
                 <br />
-                <span class="people_info_item">Phone: <%= user.tel %></span>
+                <span class="people_info_item"><%= t("user.phone")+": "+ user.tel %></span>
                 <br />
-                <span class="people_info_item">Short: <%= user.short_tel %></span>
+                <span class="people_info_item"><%= t("user.short_num")+": "+ user.short_tel %></span>
                 <br />
-                <span class="people_info_item">Skype: <%= user.skype %></span>
+                <span class="people_info_item"><%= t("user.skype")+": "+ user.skype %></span>
             </div>
         </div>
     </div>

@@ -25,6 +25,13 @@ module OnyxWeekly
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     
+    config.time_zone = 'Beijing'
+
+    config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = "zh-CN"
+
+    config.encoding = "utf-8"
+    
     ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
       html = %(<div class="field_with_errors">#{html_tag}</div>).html_safe
       # add nokogiri gem to Gemfile

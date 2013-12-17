@@ -1,14 +1,14 @@
 <div class="well">
     <div class="weekly_header">
         <span class="created_date pull-right"><%= weekly.created_at.strftime("%m/%d/%Y")%></span>
-        <h3><%= weekly.created_at.strftime("%U").to_i%></h3>
+        <h3><%= weekly.created_at.strftime("%U").to_s+" "+t("weekly.week")%></h3>
     </div>
     <div>
         <%= markdown weekly.body %>
     </div>
     <div class="weekly_footer">
         <% if weekly.user == current_user %>
-            <%= button_to 'Edit', edit_weekly_path(weekly), :method => :get, :class => "btn btn-primary btn-xs pull-right" %>
+            <%= button_to t('edit'), edit_weekly_path(weekly), :method => :get, :class => "btn btn-primary btn-xs pull-right" %>
         <% end %>
     </div>
 </div>

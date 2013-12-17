@@ -1,0 +1,38 @@
+"zh-CN":
+  project_name: "ONYX信息系统"
+  weekly:
+    weekly: "周报"
+    new_weekly: "创建周报"
+    week: "周"
+    edit_weekly: "编辑周报"
+  meeting:
+    meeting: "会议"
+    new_meeting: "创建会议"
+    tag: "标签"
+  people:
+    people: "人员"
+  user:
+    edit: "修改资料"
+    sign_out: "注销"
+    sign_up: "注册"
+    sign_in: "登录"
+    name: "名字"
+    email: "邮箱"
+    phone: "电话"
+    short_num: "短号"
+    skype: "Skype"
+    password: "密码"
+    password_confirmation: "确认密码"
+    new_password: "新密码"
+    new_password_confirmation: "确认新密码"
+    current_password: "当前密码"
+    cancel_my_account: "删除我的帐号"
+    forgot_your_password: "忘记密码？"
+    send_me_reset_password: "发送重置密码邮件"
+    change_your_password: "修改密码"
+  edit: "编辑"
+  save: "保存"
+  back: "返回"
+  update: "更新"
+  markdown_syntax: "Markdown 语法"
+  
