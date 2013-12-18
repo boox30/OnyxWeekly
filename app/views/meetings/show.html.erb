@@ -1,19 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @meeting.title %>
-</p>
+<h1><%= @meeting.title %></h1>
+<div class="well">
+    <div class="meeting_header">
+        <div class="tag_div pull-right">
+            <span class="created_date"><%= @meeting.created_at.strftime("%m/%d/%Y")%></span>
+            <br />
+            <% @meeting.tag.each do |t| %>
+            <%= link_to "#{t}", find_meetings_by_tag_meetings_path(:tag => t)%>
+            <% end %>
+        </div>
+        <%= user_avatar_tag(@meeting.user, :normal) %>
+        <%= @meeting.user.name %>
+    </div>
+    <div>
+        <%= markdown @meeting.body %>
+    </div>
+    <div class="meeting_footer">
+        <%= button_to t('back'), meetings_path, :method => :get, :class => "btn btn-default btn-xs pull-right" %>
+        <% if @meeting.user == current_user %>
+        <%= button_to t('edit'), edit_meeting_path(@meeting), :method => :get, :class => "btn btn-primary btn-xs pull-right meeting_footer_edit_button" %>
+        <% end %>
+    </div>
+</div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @meeting.body %>
-</p>
-
-<p>
-  <strong>Body html:</strong>
-  <%= @meeting.body_html %>
-</p>
-
-<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
-<%= link_to 'Back', meetings_path %>

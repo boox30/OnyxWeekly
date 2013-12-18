@@ -9,7 +9,11 @@ class Meeting
   
   belongs_to :user
   
-  def tag=(val)
-    self[:tag] = val.split(" ")  
+  def tags_list=(arg)
+    self.tag = arg.split(' ').map { |v| v.strip }
+  end
+
+  def tags_list
+    self.tag.join(' ')
   end
 end

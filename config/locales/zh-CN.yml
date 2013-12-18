@@ -9,6 +9,8 @@
     meeting: "会议"
     new_meeting: "创建会议"
     tag: "标签"
+    title: "标题"
+    edit_meeting: "编辑会议"
   people:
     people: "人员"
   user:

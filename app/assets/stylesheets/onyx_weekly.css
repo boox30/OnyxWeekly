@@ -89,6 +89,21 @@
     margin-right: 20px; 
 }
 
+
+.meeting_div .thumbnail {
+    height: 60px !important;
+    vertical-align: middle;    
+}
+
+.meeting_div img {
+    float: left;
+    margin-right: 20px;
+}
+
+.meeting_title {
+    font-size: 20px;
+}
+
 .meeting_header {
     border-bottom: 1px solid #e3e3e3;
     padding-bottom: 10px;
@@ -98,6 +113,9 @@
     border-top: 1px solid #e3e3e3;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+.meeting_footer_edit_button {
+    margin-right: 20px;
 }
 .meeting_header .tag_div a {
     color: #777777

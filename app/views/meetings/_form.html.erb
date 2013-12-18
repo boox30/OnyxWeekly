@@ -10,10 +10,14 @@
       </ul>
     </div>
   <% end %>
-
+    
+  <div class="form-group">
+    <%= f.label t("meeting.title") %><br>
+    <%= f.text_field :title, :class => "form-control" %>
+  </div>
   <div class="form-group">
     <%= f.label t("meeting.tag") %><br>
-    <%= f.text_field :tag, :class => "form-control", :placeholder => "销售 生产 研发" %>
+    <%= f.text_field :tags_list, :class => "form-control", :placeholder => "销售 生产 研发" %>
   </div>
   <div class="form-group">
     <%= f.text_area :body, :class => "form-control", :rows => "20", :cols => "40" %>
