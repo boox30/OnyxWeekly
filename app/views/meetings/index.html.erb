@@ -9,7 +9,7 @@
         <div class="thumbnail">
             <%= user_avatar_tag(meeting.user, :normal) %>
             <div class="metting_info">
-                <div class="tag_div pull-right">
+                <div class="tag_div pull-right meeting_tag">
                     <a href="<%= meeting_path(meeting) %>"><span class="created_date"><%= meeting.created_at.strftime("%m/%d/%Y")%></span></a>
                     <br />
                     <% meeting.tag.each do |t| %>

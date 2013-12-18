@@ -104,6 +104,13 @@
     min-width:50%;
     display:block;
 }
+.meeting_tag {
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    display:block;
+    max-width: 90px;
+}
 .meeting_div a:hover {
     background-color: #666666;
 }
