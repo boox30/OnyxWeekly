@@ -32,7 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git', ref: "c6c80fce9b356180e11f922332c68d4310cf2f92"
 
 gem "bson_ext", '1.5.1'
 
@@ -40,7 +40,7 @@ gem "bson_ext", '1.5.1'
 #bootstrap
 gem "therubyracer"
 gem "less-rails"
-gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3'
+gem 'twitter-bootstrap-rails', github: 'seyhunak/twitter-bootstrap-rails', branch: 'bootstrap3', ref: "0607d70e520b3716257095c344828509cd751cdd"
 
 gem 'devise', '3.2.2'
 

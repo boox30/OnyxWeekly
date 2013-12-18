@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/seyhunak/twitter-bootstrap-rails.git
   revision: 0607d70e520b3716257095c344828509cd751cdd
+  ref: 0607d70e520b3716257095c344828509cd751cdd
   branch: bootstrap3
   specs:
     twitter-bootstrap-rails (2.2.7)
@@ -12,6 +13,7 @@ GIT
 GIT
   remote: https://github.com/mongoid/mongoid.git
   revision: c6c80fce9b356180e11f922332c68d4310cf2f92
+  ref: c6c80fce9b356180e11f922332c68d4310cf2f92
   specs:
     mongoid (4.0.0.alpha1)
       activemodel (~> 4.0.0)
@@ -20,7 +22,7 @@ GIT
       tzinfo (~> 0.3.37)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://ruby.taobao.org/
   specs:
     actionmailer (4.0.0)
       actionpack (= 4.0.0)
