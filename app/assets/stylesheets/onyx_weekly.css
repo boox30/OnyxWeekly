@@ -121,6 +121,10 @@
     color: #777777
 }
 
+.top-buffer {
+    margin-top:10px; 
+}
+
 #people_list .thumbnail {
     height: 130px;
 }

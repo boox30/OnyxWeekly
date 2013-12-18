@@ -5,7 +5,7 @@
 
 <div class="row">
     <% @meetings.each do |meeting| %>
-    <div class="meeting_div col-sm-6 col-md-6">
+    <div class="meeting_div col-sm-6 col-md-6  top-buffer">
         <div class="thumbnail">
             <%= user_avatar_tag(meeting.user, :normal) %>
             <div class="metting_info">
