@@ -16,7 +16,7 @@
                     <%= link_to "#{t}", find_meetings_by_tag_meetings_path(:tag => t)%>
                     <% end %>
                 </div>
-                <a href="<%= meeting_path(meeting) %>"><span class="meeting_title"><%= meeting.title%></span></a>
+                <a href="<%= meeting_path(meeting) %>" class="meeting_title"><%= meeting.title%></a>
                 <span><%= meeting.user.name %></span>
             </div>
         </div>

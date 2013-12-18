@@ -104,6 +104,9 @@
     min-width:50%;
     display:block;
 }
+.meeting_div a:hover {
+    background-color: #666666;
+}
 
 .meeting_header {
     border-bottom: 1px solid #e3e3e3;
