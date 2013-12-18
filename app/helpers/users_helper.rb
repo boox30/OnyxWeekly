@@ -29,8 +29,8 @@ module UsersHelper
     if user.blank?
       return image_tag("avatar/#{size}.png")
     end
-
-    if user[:avatar].blank?
+      
+    if !user.avatar?
       default_url = asset_path("avatar/#{size}.png")
       img_src = "http://gravatar.com/avatar/#{user.email_md5}.png?s=#{width * 2}&d=mm"
       img = image_tag(img_src, :class => "uface", :style => "width:#{width}px;height:#{width}px;")

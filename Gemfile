@@ -48,6 +48,7 @@ gem "rails-i18n"
 
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'mini_magick'
 
 gem "nested_form"
 
